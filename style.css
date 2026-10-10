@@ -142,7 +142,7 @@ body.night #apartmentDisplay {
     line-height: 1.1;
 }
 
-#rainfall {
+#precipitation {
     position: fixed;
     top: 60px;
     left: 50%;

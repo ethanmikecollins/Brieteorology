@@ -44,6 +44,7 @@ async function startApp() {
     requestAnimationFrame(updateFrame);
 
     setInterval(loadWeather, 5 * 60 * 1000);
+    console.log(weather.daily.moon_phase)
 }
 
 startApp();
@@ -305,7 +306,7 @@ function updateSunMoon(weather){
 
 let precipC = 0;
 function updatePrecip(weather){
-    const rainfall = document.getElementById("rainfall");
+    const precipitation = document.getElementById("precipitation");
 
     let chosenFrame;
     const frameLength = rainFrames[0].length;
@@ -314,7 +315,7 @@ function updatePrecip(weather){
     if (weather.hourly.precipitation[hourIndex] == 0 && weather.hourly.snowfall[hourIndex] == 0){
         chosenFrame = " ";
     }else if (weather.hourly.snowfall[hourIndex] > 0){
-        fallTime = 500;
+        fallTime = 100;
         precipSway = true;
         if (weather.hourly.snowfall[hourIndex] <= 0.5){
             chosenFrame = snowFrames[2];
@@ -330,9 +331,6 @@ function updatePrecip(weather){
     }else{
         chosenFrame = rainFrames[0];
     }
-
-    chosenFrame = snowFrames[0];
-    fallTime = 100;
     
     let precipStr = "";
     let rowIndex = Math.floor(precipC/fallTime);
@@ -351,24 +349,21 @@ function updatePrecip(weather){
         const swayOffsets = [-4, -2, 0, 2, 4, 2, 0, -2];
         const centerPadding = 4;
 
-        for (let i = 0; i < shiftedRows.length; i++) {
-            if (precipSway) {
+        for (let i = 0; i < shiftedRows.length; i++){
+            if (precipSway){
                 const offset = swayOffsets[i % swayOffsets.length];
 
                 const leftSpaces = centerPadding + offset;
                 const rightSpaces = centerPadding - offset;
 
-                precipStr +=
-                    " ".repeat(leftSpaces) +
-                    renderPrecip(shiftedRows[i]) +
-                    " ".repeat(rightSpaces) + "\n";
-            } else {
+                precipStr += " ".repeat(leftSpaces) + renderPrecip(shiftedRows[i]) + " ".repeat(rightSpaces) + "\n";
+            }else{
                 precipStr += renderPrecip(shiftedRows[i]) + "\n";
             }
         }
     }
 
-    rainfall.innerHTML = precipStr;
+    precipitation.innerHTML = precipStr;
 
     precipC += 1;
 }
