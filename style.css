@@ -12,6 +12,20 @@ body,
     cursor: none !important;
 }
 
+#timeDisplay,
+#dateDisplay,
+#tempDisplay,
+#humidDisplay,
+#windDisplay,
+#cloudDisplay,
+#rainDisplay,
+#snowDisplay {
+    font-family: monospace;
+    font-size: 24px;
+    line-height: 0.8;
+    margin: 0;
+}
+
 #titleDisplay {
     position: fixed;
     top: 12px;
@@ -25,9 +39,6 @@ body,
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 
@@ -42,9 +53,6 @@ body,
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 #dateDisplay {
@@ -58,9 +66,6 @@ body,
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 body.day {
@@ -194,9 +199,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 12px;
 }
 
 #tempDisplay {
@@ -212,9 +214,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 #tempMinMaxDisplay {
@@ -230,9 +229,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 12px;
 }
 
 #humidIconDisplay {
@@ -248,9 +244,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 12px;
 }
 
 #humidDisplay {
@@ -266,9 +259,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 #windIconDisplay {
@@ -284,9 +274,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 12px;
 }
 
 #windDisplay {
@@ -302,9 +289,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 #cloudIconDisplay {
@@ -320,9 +304,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 12px;
 }
 
 #cloudDisplay {
@@ -338,9 +319,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 #rainIconDisplay {
@@ -356,9 +334,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 12px;
 }
 
 #rainDisplay {
@@ -374,9 +349,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 #snowIconDisplay {
@@ -392,9 +364,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 12px;
 }
 
 #snowDisplay {
@@ -410,9 +379,6 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
-
-    font-family: monospace;
-    font-size: 24px;
 }
 
 .tommy-brown {
