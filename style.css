@@ -200,6 +200,8 @@ body.night #apartmentDisplay {
 
     pointer-events: none;
     user-select: none;
+
+    font-size: 14px;
 }
 
 #tempDisplay {
