@@ -312,7 +312,7 @@ body.night #apartmentDisplay {
 #cloudDisplay {
     position: fixed;
     top: 40%;
-    left: 1050px;
+    left: 1020px;
 
     transform: translateY(-50%);
 
