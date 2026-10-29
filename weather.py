@@ -84,3 +84,7 @@ def main():
         except requests.RequestException as error:
             print(f"Weather update failed: {error}")
             time.sleep(60)
+
+
+if __name__ == "__main__":
+    main()
