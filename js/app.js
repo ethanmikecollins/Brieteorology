@@ -202,7 +202,7 @@ function updateTime(now){
     }else if (month == 9){
         monthStr = "SEP"
     }else if (month == 10){
-        monthStr = "TEST"
+        monthStr = "OCT"
     }else if (month == 11){
         monthStr = "NOV"
     }else if (month == 12){
