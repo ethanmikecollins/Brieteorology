@@ -374,6 +374,8 @@ function updatePrecip(weather){
         precipC = 0;
     }
 
+    chosenFrame = rainFrames[0];
+
     if (chosenFrame != " "){
         const shiftedRows = [
             ...chosenFrame.slice(frameLength - rowIndex),
