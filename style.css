@@ -34,7 +34,7 @@ body,
 #timeDisplay {
     position: fixed;
     top: 12px;
-    left: 24px;
+    right: 24px;
 
     color: inherit;
 
@@ -50,7 +50,7 @@ body,
 #dateDisplay {
     position: fixed;
     top: 12px;
-    right: 24px;
+    left: 24px;
 
     color: inherit;
 
