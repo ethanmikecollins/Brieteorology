@@ -88,7 +88,7 @@ async function loadWeather(){
     }
 }
 
-function updateFrame(){
+function updateFrame(timestamp){
     let now;
     if (predictionMode){
         now = predictionNow;
@@ -347,7 +347,7 @@ function updatePrecip(weather){
     }
 
     lastPrecipUpdate = timestamp;
-    
+
     const precipitation = document.getElementById("precipitation");
 
     let chosenFrame;
