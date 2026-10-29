@@ -31,10 +31,26 @@ body,
 }
 
 
-#dateTimeDisplay {
+#timeDisplay {
     position: fixed;
     top: 12px;
     left: 24px;
+
+    color: inherit;
+
+    z-index: 1000;
+
+    pointer-events: none;
+    user-select: none;
+
+    font-family: monospace;
+    font-size: 24px;
+}
+
+#dateDisplay {
+    position: fixed;
+    top: 12px;
+    right: 24px;
 
     color: inherit;
 

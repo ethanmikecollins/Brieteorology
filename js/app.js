@@ -129,7 +129,8 @@ document.addEventListener("keydown", (event) => {
 
 
 function updateTime(now){
-    const dateTimeDisplay = document.getElementById("dateTimeDisplay");
+    const timeDisplay = document.getElementById("timeDisplay");
+    const dateDisplay = document.getElementById("dateDisplay");
     const year = now.getFullYear();
     const month = now.getMonth() + 1;
     const day = now.getDate();
@@ -195,7 +196,8 @@ function updateTime(now){
     }else{
         dateTime = [toAscii(`${weekdayStr} ${monthStr} ${day}`), toAscii(`${hours}:${minutes} ${AMPM}`)];
     }
-    dateTimeDisplay.textContent = dateTime.join("\n")
+    timeDisplay.textContent = dateTime[0];
+    dateDisplay.textContent = dateTime[1];
 }
 
 function updateBackground(now, weather){
