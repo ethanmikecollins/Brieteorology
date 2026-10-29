@@ -339,7 +339,15 @@ function updateSunMoon(weather){
 }
 
 let precipC = 0;
+let lastPrecipUpdate = 0;
+const precipInterval = 1000 / 20; // 20 FPS
 function updatePrecip(weather){
+    if (timestamp - lastPrecipUpdate < precipInterval) {
+        return;
+    }
+
+    lastPrecipUpdate = timestamp;
+    
     const precipitation = document.getElementById("precipitation");
 
     let chosenFrame;
