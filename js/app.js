@@ -202,7 +202,7 @@ function updateTime(now){
     }else if (month == 9){
         monthStr = "SEP"
     }else if (month == 10){
-        monthStr = "OCT"
+        monthStr = "TEST"
     }else if (month == 11){
         monthStr = "NOV"
     }else if (month == 12){
@@ -373,10 +373,6 @@ function updatePrecip(weather){
         rowIndex = 0;
         precipC = 0;
     }
-
-    chosenFrame = rainFrames[0];
-
-    
 
     if (chosenFrame != " "){
         const shiftedRows = [
