@@ -243,7 +243,7 @@ export const apartmentBot = String.raw`│                     │-----------│
 │                    ││-│-│-│-│-│-│││-----------│  │
 │                    ││-│-│-│-│-│-│││-----------│  │
 │                    ││-│-│-│-│-│-│││-----------│  │
-│                    └┼─┴─┴─┴─┴─┴─┴┼┼───────────└┐ │
+│                    └┼─┴─┴─┴─┴─┴─┴┼┼───────────┴┐ │
 │                     └────────────┼├~~~~~~~~~~~~┤ │
 │▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒││    \\\\\\\\│▒│
 │##################################├├~~~~~~~~~~~~┤#│
@@ -331,33 +331,33 @@ const TommyFrameso = [String.raw
 const TommyFrames = [String.raw
 `
 │ ┌─────────────────┐ ┌───────────┐ ┌───────────┐  │
-│ │[[red]]===}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{===[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]==}[[/red]]   ([[green]]•[[/green]]ω[[green]]•[[/green]])╰[[brown]]╮[[/brown]] [[red]]{==[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]=}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{=[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]///}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{\\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]//}[[/red]]   ([[green]]•[[/green]]ω[[green]]•[[/green]])╰[[brown]]╮[[/brown]] [[red]]{\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]/}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{\[[/red]]│ │-----------│ │-----------│  │
 │ │[[red]]}[[/red]]    [[brown]](\[[/brown]]|||[[brown]]/)[[/brown]]╯   [[red]]{[[/red]]│ │-----------│ │-----------│  │
 │ └─────────────────┘ │---------@-│ │-@---------│  │
 `, String.raw
 `
 │ ┌─────────────────┐ ┌───────────┐ ┌───────────┐  │
-│ │[[red]]===}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{===[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]==}[[/red]]   ([[green]]•[[/green]]ω[[green]]•[[/green]]) [[brown]]│[[/brown]] [[red]]{==[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]=}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{=[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]///}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{\\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]//}[[/red]]   ([[green]]•[[/green]]ω[[green]]•[[/green]]) [[brown]]│[[/brown]] [[red]]{\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]/}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{\[[/red]]│ │-----------│ │-----------│  │
 │ │[[red]]}[[/red]]    [[brown]](\[[/brown]]|||[[brown]]/)[[/brown]]╯   [[red]]{[[/red]]│ │-----------│ │-----------│  │
 │ └─────────────────┘ │---------@-│ │-@---------│  │
 `, String.raw
 `
 │ ┌─────────────────┐ ┌───────────┐ ┌───────────┐  │
-│ │[[red]]===}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{===[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]==}[[/red]]   ([[green]]•[[/green]]ω[[green]]•[[/green]]) [[brown]]╭[[/brown]]╯[[red]]{==[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]=}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{=[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]///}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{\\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]//}[[/red]]   ([[green]]•[[/green]]ω[[green]]•[[/green]]) [[brown]]╭[[/brown]]╯[[red]]{\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]/}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{\[[/red]]│ │-----------│ │-----------│  │
 │ │[[red]]}[[/red]]    [[brown]](\[[/brown]]|||[[brown]]/)[[/brown]]╯   [[red]]{[[/red]]│ │-----------│ │-----------│  │
 │ └─────────────────┘ │---------@-│ │-@---------│  │
 `, String.raw
 `
 │ ┌─────────────────┐ ┌───────────┐ ┌───────────┐  │
-│ │[[red]]===}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{===[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]==}[[/red]]   (>ω<)╰[[brown]]╮[[/brown]] [[red]]{==[[/red]]│ │-----------│ │-----------│  │
-│ │[[red]]=}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{=[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]///}[[/red]]   [[brown]]/v\[[/brown]]   [[red]]{\\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]//}[[/red]]   (>ω<)╰[[brown]]╮[[/brown]] [[red]]{\\[[/red]]│ │-----------│ │-----------│  │
+│ │[[red]]/}[[/red]]    [[brown]]/   \[[/brown]] │  [[red]]{\[[/red]]│ │-----------│ │-----------│  │
 │ │[[red]]}[[/red]]    [[brown]](\[[/brown]]|||[[brown]]/)[[/brown]]╯   [[red]]{[[/red]]│ │-----------│ │-----------│  │
 │ └─────────────────┘ │---------@-│ │-@---------│  │
 `
@@ -484,7 +484,7 @@ export const moonFrames = [String.raw // Full moon
 
 export const sun = String.raw
 `
- \      |      / 
+ [[yellow]]\      |      / 
   ╭───────────╮  
   │           │  
   │           │  
@@ -492,7 +492,7 @@ export const sun = String.raw
   │           │  
   │           │  
   ╰───────────╯  
- /      |      \ 
+ /      |      \[[/yellow]] 
 `;
 
 
@@ -625,99 +625,99 @@ export const rainFrames = [[String.raw `|   │       │        |      |       
   String.raw `         |              │     │                   | `,
   String.raw `              │     |               │     |         `,
   String.raw `          │     |               │              |    `,
-  String.raw `   │               │               |        │      |`,
+  String.raw `   │                         │      |        │      |`,
   String.raw `      |     │            │           |              `,
   String.raw ` │            |   │             |          │      │ `,
-  String.raw `          |          │  |      |    |         │     `,
+  String.raw `          |         │    |      |    |         │     `,
   String.raw `       │         |     |          │    |           |`,
   String.raw `│          │       |     |     │         |    │     `,
-  String.raw `  │      |              │     |            |    │   `,
-  String.raw `           │   │      |          |       |   │      `,
+  String.raw `  │      |            │        |            |    │   `,
+  String.raw `           │   │             |    |       |   │      `,
   String.raw `    │       │        |               |         │    `,
   String.raw `         |              │     │                   | `,
   String.raw `              │     |               │     |         `,
   String.raw `          │     |               │              |    `,
-  String.raw `   │               │               |        │      |`,
+  String.raw `   │                         │      |        │      |`,
   String.raw `      |     │            │           |              `,
   String.raw ` │            |   │             |          │      │ `,
-  String.raw `          |          │  |      |    |         │     `,
+  String.raw `          |         │    |      |    |         │     `,
   String.raw `       │         |     |          │    |           |`,
   String.raw `│          │       |     |     │         |    │     `,
-  String.raw `  │      |              │     |            |    │   `,
-  String.raw `           │   │      |          |       |   │      `,
+  String.raw `  │      |            │        |            |    │   `,
+  String.raw `           │   │             |    |       |   │      `,
+ String.raw `    │       │        |               |         │    `,
+  String.raw `         |              │     │                   | `,
+  String.raw `              │     |               │     |         `,
+  String.raw `          │     |               │              |    `,
+  String.raw `   │                         │      |        │      |`,
+  String.raw `      |     │            │           |              `,
+  String.raw ` │            |   │             |          │      │ `,
+  String.raw `          |         │    |      |    |         │     `,
+  String.raw `       │         |     |          │    |           |`,
+  String.raw `│          │       |     |     │         |    │     `,
+  String.raw `  │      |            │        |            |    │   `,
+  String.raw `           │   │             |    |       |   │      `,
   String.raw `    │       │        |               |         │    `,
   String.raw `         |              │     │                   | `,
   String.raw `              │     |               │     |         `,
   String.raw `          │     |               │              |    `,
-  String.raw `   │               │               |        │      |`,
+  String.raw `   │                         │      |        │      |`,
   String.raw `      |     │            │           |              `,
   String.raw ` │            |   │             |          │      │ `,
-  String.raw `          |          │  |      |    |         │     `,
+  String.raw `          |         │    |      |    |         │     `,
   String.raw `       │         |     |          │    |           |`,
   String.raw `│          │       |     |     │         |    │     `,
-  String.raw `  │      |              │     |            |    │   `,
-  String.raw `           │   │      |          |       |   │      `,
-  String.raw `    │       │        |               |         │    `,
-  String.raw `         |              │     │                   | `,
-  String.raw `              │     |               │     |         `,
-  String.raw `          │     |               │              |    `,
-  String.raw `   │               │               |        │      |`,
-  String.raw `      |     │            │           |              `,
-  String.raw ` │            |   │             |          │      │ `,
-  String.raw `          |          │  |      |    |         │     `,
-  String.raw `       │         |     |          │    |           |`,
-  String.raw `│          │       |     |     │         |    │     `,
-  String.raw `  │      |              │     |            |    │   `,
-  String.raw `           │   │      |          |       |   │      `],
+  String.raw `  │      |            │        |            |    │   `,
+  String.raw `           │   │             |    |       |   │      `],
 
   [String.raw `    │                |                         │    `,
   String.raw `         |                    │                     `,
   String.raw `                    |                     |         `,
   String.raw `          │                     │                   `,
-  String.raw `                   │                        │      |`,
-  String.raw `      |                  │                          `,
+  String.raw `                       │                     │      |`,
+  String.raw `      |                      │                       `,
   String.raw ` │                │                               │ `,
-  String.raw `          |             |           |               `,
+  String.raw `          |                         |       |        `,
   String.raw `                 |     |               |            `,
   String.raw `│                  |           │              │     `,
   String.raw `         |              │                       │   `,
-  String.raw `               │      |                  |          `,
+  String.raw `               │                   |      |          `,
   String.raw `    │                |                         │    `,
   String.raw `         |                    │                     `,
   String.raw `                    |                     |         `,
   String.raw `          │                     │                   `,
-  String.raw `                   │                        │      |`,
-  String.raw `      |                  │                          `,
+  String.raw `                       │                     │      |`,
+  String.raw `      |                      │                       `,
   String.raw ` │                │                               │ `,
-  String.raw `          |             |           |               `,
+  String.raw `          |                         |       |        `,
   String.raw `                 |     |               |            `,
   String.raw `│                  |           │              │     `,
   String.raw `         |              │                       │   `,
-  String.raw `               │      |                  |          `,
+  String.raw `               │                   |      |          `,
   String.raw `    │                |                         │    `,
   String.raw `         |                    │                     `,
   String.raw `                    |                     |         `,
   String.raw `          │                     │                   `,
-  String.raw `                   │                        │      |`,
-  String.raw `      |                  │                          `,
+  String.raw `                       │                     │      |`,
+  String.raw `      |                      │                       `,
   String.raw ` │                │                               │ `,
-  String.raw `          |             |           |               `,
+  String.raw `          |                         |       |        `,
   String.raw `                 |     |               |            `,
   String.raw `│                  |           │              │     `,
   String.raw `         |              │                       │   `,
-  String.raw `               │      |                  |          `,
+  String.raw `               │                   |      |          `,
   String.raw `    │                |                         │    `,
   String.raw `         |                    │                     `,
   String.raw `                    |                     |         `,
   String.raw `          │                     │                   `,
-  String.raw `                   │                        │      |`,
-  String.raw `      |                  │                          `,
+  String.raw `                       │                     │      |`,
+  String.raw `      |                      │                       `,
   String.raw ` │                │                               │ `,
-  String.raw `          |             |           |               `,
+  String.raw `          |                         |       |        `,
   String.raw `                 |     |               |            `,
   String.raw `│                  |           │              │     `,
   String.raw `         |              │                       │   `,
-  String.raw `               │      |                  |          `]];
+  String.raw `               │                   |      |          `]];
 
 
 export const snowFrames = [[String.raw `#   .       •        *      +        •     #   .    `,

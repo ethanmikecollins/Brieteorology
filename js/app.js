@@ -1,5 +1,4 @@
 import { toAscii } from "./ascii.js";
-import { apartmentTotal } from "./art.js";
 import { updateTommy } from "./art.js";
 import { treeFrames } from "./art.js";
 import { apartmentTop } from "./art.js";
@@ -252,7 +251,7 @@ function updateSunMoon(weather){
     const sunMoon = document.getElementById("sunMoon");
     let planet;
     if (document.body.classList.contains("day")) {
-        planet = sun;
+        planet = renderAscii(sun);
     }else{
         const phase = weather.daily.moon_phase[dayIndex]
         let moon;
@@ -311,7 +310,7 @@ function updatePrecip(weather){
     let chosenFrame;
     const frameLength = rainFrames[0].length;
     let fallTime = 10;
-    let precipSway = true;
+    let precipSway = false;
     if (weather.hourly.precipitation[hourIndex] == 0 && weather.hourly.snowfall[hourIndex] == 0){
         chosenFrame = " ";
     }else if (weather.hourly.snowfall[hourIndex] > 0){
