@@ -312,7 +312,7 @@ body.night #apartmentDisplay {
 #cloudDisplay {
     position: fixed;
     top: 40%;
-    left: 1100px;
+    left: 900px;
 
     transform: translateY(-50%);
 
@@ -348,7 +348,7 @@ body.night #apartmentDisplay {
 #rainDisplay {
     position: fixed;
     top: 60%;
-    left: 1100px;
+    left: 900px;
 
     transform: translateY(-50%);
 
@@ -384,7 +384,7 @@ body.night #apartmentDisplay {
 #snowDisplay {
     position: fixed;
     top: 80%;
-    left: 1100px;
+    left: 900px;
 
     transform: translateY(-50%);
 
