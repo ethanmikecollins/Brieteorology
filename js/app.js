@@ -38,21 +38,54 @@ snowIconDisplay.innerHTML = renderAscii(snow)
 
 
 async function startApp() {
-    await loadWeather();
+    let weatherReady = false;
+
+    while (!weatherReady) {
+        weatherReady = await loadWeather();
+
+        if (!weatherReady) {
+            await new Promise(resolve =>
+                setTimeout(resolve, 1000)
+            );
+        }
+    }
 
     requestAnimationFrame(updateFrame);
-
-    setInterval(loadWeather, 5 * 60 * 1000);
-    console.log(weather.daily.moon_phase)
+    setInterval(
+        loadWeather,
+        5 * 60 * 1000
+    );
 }
 
 startApp();
 
+const weatherMaxAge = 6 * 60 * 60 * 1000;
 async function loadWeather(){
-    const response = await fetch("weather.json", {cache: "no-store"});
-    weather = await response.json();
+    try {
+        const response = await fetch("weather.json", {
+            cache: "no-store"
+        });
 
-    initHour = new Date(weather.hourly.time[0]);
+        if (!response.ok) {
+            return false;
+        }
+
+        const newWeather = await response.json();
+        const fetchedAt = new Date(newWeather.fetched_at);
+        const weatherAge = Date.now() - fetchedAt.getTime();
+
+        if (weatherAge >= weatherMaxAge) {
+            return false;
+        }
+
+        weather = newWeather;
+        initHour = new Date(weather.hourly.time[0]);
+
+        return true;
+
+    } catch (error) {
+        return false;
+    }
 }
 
 function updateFrame(){

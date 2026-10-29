@@ -1,6 +1,8 @@
 import requests
 import json
 import time
+from datetime import datetime, timezone
+import os
 
 
 def update_weather():
@@ -45,16 +47,40 @@ def update_weather():
     response.raise_for_status()
 
     weather = response.json()
+    weather["fetched_at"] = datetime.now(timezone.utc).isoformat()
     with open("weather.json", "w") as file:
         json.dump(weather, file)
+
+
+REFRESH_SECONDS = 6 * 60 * 60
+
+
+def get_cached_fetch_time():
+    try:
+        with open("weather.json", "r") as file:
+            weather = json.load(file)
+
+        return datetime.fromisoformat(weather["fetched_at"])
+
+    except (FileNotFoundError, KeyError, ValueError, json.JSONDecodeError):
+        return None
 
 
 def main():
 
     while True:
+        fetched_at = get_cached_fetch_time()
+        if fetched_at is not None:
+            now = datetime.now(timezone.utc)
+            age = (now - fetched_at).total_seconds()
 
-        update_weather()
-        time.sleep(6 * 60 * 60)
+            if age < REFRESH_SECONDS:
+                time_remaining = REFRESH_SECONDS - age
+                time.sleep(time_remaining)
+                continue
 
-
-main()
+        try:
+            update_weather()
+        except requests.RequestException as error:
+            print(f"Weather update failed: {error}")
+            time.sleep(60)
