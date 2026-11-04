@@ -12,6 +12,10 @@ body,
     cursor: none !important;
 }
 
+pre {
+    font-family: "DejaVu Sans Mono", monospace;
+}
+
 #titleDisplay {
     position: fixed;
     top: 12px;
@@ -26,7 +30,7 @@ body,
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
 }
 
@@ -43,7 +47,7 @@ body,
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
@@ -60,7 +64,7 @@ body,
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
@@ -92,7 +96,7 @@ body.night {
     margin: 0;
     padding: 0;
 
-    font-family: monospace;
+    
     font-size: 10px;
     line-height: 1;
     white-space: pre;
@@ -144,7 +148,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 14px;
     line-height: 1.1;
 }
@@ -161,7 +165,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1.1;
 }
@@ -178,7 +182,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1.1;
 }
@@ -197,7 +201,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1;
 }
@@ -216,7 +220,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
@@ -235,7 +239,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1;
 }
@@ -254,7 +258,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1;
 }
@@ -273,7 +277,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
@@ -292,7 +296,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1;
 }
@@ -311,7 +315,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
@@ -330,7 +334,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1;
 }
@@ -349,7 +353,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
@@ -368,7 +372,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1;
 }
@@ -387,7 +391,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
@@ -406,7 +410,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 12px;
     line-height: 1;
 }
@@ -425,7 +429,7 @@ body.night #apartmentDisplay {
     pointer-events: none;
     user-select: none;
 
-    font-family: monospace;
+    
     font-size: 24px;
     line-height: 1;
 }
