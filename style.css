@@ -88,6 +88,7 @@ body.night {
     top: 65%;
     transform: translate(-50%, -50%);
 
+    font-family: monospace;
     z-index: 20;
 }
 
@@ -100,6 +101,7 @@ body.night {
     font-size: 10px;
     line-height: 1;
     white-space: pre;
+    font-family: monospace;
 }
 
 #treeDisplay {
