@@ -88,7 +88,7 @@ body.night {
     top: 65%;
     transform: translate(-50%, -50%);
 
-    font-family: monospace;
+    font-family: "DejaVu Sans Mono", monospace;
     z-index: 20;
 }
 
