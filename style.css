@@ -446,22 +446,22 @@ body.night #apartmentDisplay {
     color: rgb(29, 156, 211);
 }
 
-.rain-char {
-    color: rgb(29, 156, 211, 0.5);
-}
-
-body.day .snow-char {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-body.night .snow-char {
-    color: rgba(255, 255, 255, 0.5);
-}
-
 .sun-yellow {
     color: rgb(239, 208, 4);
 }
 
 .cloud-gray {
     color: gray;
+}
+
+#precipitation.rain {
+    color: rgba(29, 156, 211, 0.5);
+}
+
+body.day #precipitation.snow {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body.night #precipitation.snow {
+    color: rgba(255, 255, 255, 0.5);
 }

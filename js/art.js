@@ -198,24 +198,6 @@ export function renderTree(tree) {
 }
 
 
-export function renderPrecip(frame) {
-  let html = "";
-
-  for (let i = 0; i < frame.length; i++){
-    const char = frame[i];
-    
-    if (char == " "){
-      html += char;
-    }else if (char == "|" || char == "│"){
-      html += `<span class="rain-char">${char}</span>`;
-    }else{
-      html += `<span class="snow-char">${char}</span>`;
-    }
-  }
-
-  return html;
-}
-
 
 export const apartmentTop = String.raw
 `├──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┤
@@ -823,46 +805,46 @@ export const snowFrames = [[String.raw `#   .       •        *      +        �
   String.raw `     +                              .               `,
   String.raw `                #                              .    `,
   String.raw `   #                          +             *       `,
-  String.raw `            *            .                          `,
+  String.raw `                   *     .                          `,
   String.raw ` +                          +              +        `,
-  String.raw `          *             •           •               `,
+  String.raw `         *              •           •               `,
   String.raw `             .                +        #            `,
-  String.raw `      *            *                     .       #  `,
-  String.raw `         +                    •                 .   `,
-  String.raw `    #                      .                 •      `,
+  String.raw `      *               *                  .       #  `,
+  String.raw `                +             •                 .   `,
+  String.raw `            #              .                 •      `,
   String.raw `    .                *                         .    `,
   String.raw `                        •             #             `,
   String.raw `     +                              .               `,
   String.raw `                #                              .    `,
   String.raw `   #                          +             *       `,
-  String.raw `            *            .                          `,
+  String.raw `                   *     .                          `,
   String.raw ` +                          +              +        `,
-  String.raw `          *             •           •               `,
+  String.raw `         *              •           •               `,
   String.raw `             .                +        #            `,
-  String.raw `      *            *                     .       #  `,
-  String.raw `         +                    •                 .   `,
-  String.raw `    #                      .                 •      `,
+  String.raw `      *               *                  .       #  `,
+  String.raw `                +             •                 .   `,
+  String.raw `            #              .                 •      `,
   String.raw `    .                *                         .    `,
   String.raw `                        •             #             `,
   String.raw `     +                              .               `,
   String.raw `                #                              .    `,
   String.raw `   #                          +             *       `,
-  String.raw `            *            .                          `,
+  String.raw `                   *     .                          `,
   String.raw ` +                          +              +        `,
-  String.raw `          *             •           •               `,
+  String.raw `         *              •           •               `,
   String.raw `             .                +        #            `,
-  String.raw `      *            *                     .       #  `,
-  String.raw `         +                    •                 .   `,
-  String.raw `    #                      .                 •      `,
+  String.raw `      *               *                  .       #  `,
+  String.raw `                +             •                 .   `,
+  String.raw `            #              .                 •      `,
   String.raw `    .                *                         .    `,
   String.raw `                        •             #             `,
   String.raw `     +                              .               `,
   String.raw `                #                              .    `,
   String.raw `   #                          +             *       `,
-  String.raw `            *            .                          `,
+  String.raw `                   *     .                          `,
   String.raw ` +                          +              +        `,
-  String.raw `          *             •           •               `,
+  String.raw `         *              •           •               `,
   String.raw `             .                +        #            `,
-  String.raw `      *            *                     .       #  `,
-  String.raw `         +                    •                 .   `,
-  String.raw `    #                      .                 •      `]];
+  String.raw `      *               *                  .       #  `,
+  String.raw `                +             •                 .   `,
+  String.raw `            #              .                 •      `]];

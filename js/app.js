@@ -16,7 +16,6 @@ import { rain } from "./art.js";
 import { snow } from "./art.js";
 import { rainFrames } from "./art.js";
 import { snowFrames } from "./art.js";
-import { renderPrecip } from "./art.js";
 
 
 let weather;
@@ -341,7 +340,9 @@ function updateSunMoon(weather){
 let precipC = 0;
 let lastPrecipUpdate = 0;
 const precipInterval = 1000 / 20; // 20 FPS
-function updatePrecip(weather){
+let lastPrecipRow = -1;
+let lastPrecipType = "";
+function updatePrecip(weather, timestamp){
     if (timestamp - lastPrecipUpdate < precipInterval) {
         return;
     }
@@ -351,30 +352,54 @@ function updatePrecip(weather){
     const precipitation = document.getElementById("precipitation");
 
     let chosenFrame;
-    const frameLength = rainFrames[0].length;
     let fallTime = 10;
     let precipSway = false;
+
+    let precipType = "";
+
+
     if (weather.hourly.precipitation[hourIndex] == 0 && weather.hourly.snowfall[hourIndex] == 0){
-        chosenFrame = " ";
+        precipitation.classList.remove("rain", "snow");
+        precipitation.textContent = "";
+
+        precipC = 0;
+        lastPrecipRow = -1;
+        lastPrecipType = "none";
+
+        return;
     }else if (weather.hourly.snowfall[hourIndex] > 0){
+        precipitation.classList.remove("rain");
+        precipitation.classList.add("snow");
+
         fallTime = 100;
         precipSway = true;
         if (weather.hourly.snowfall[hourIndex] <= 0.5){
             chosenFrame = snowFrames[2];
+            precipType = "snow-light";
         }else if (weather.hourly.snowfall[hourIndex] <= 1.0){
-            chosenFrame = snowFrames[2];
+            chosenFrame = snowFrames[1];
+            precipType = "snow-med";
         }else{
-            chosenFrame = snowFrames[2];
+            chosenFrame = snowFrames[0];
+            precipType = "snow-heavy";
         }
-    }else if (weather.hourly.precipitation[hourIndex] <= 0.05){
-        chosenFrame = rainFrames[2];
-    }else if (weather.hourly.precipitation[hourIndex] <= 0.15){
-        chosenFrame = rainFrames[1];
-    }else{
-        chosenFrame = rainFrames[0];
+    }else {
+        precipitation.classList.remove("snow");
+        precipitation.classList.add("rain");
+
+        if (weather.hourly.precipitation[hourIndex] <= 0.05){
+            chosenFrame = rainFrames[2];
+            precipType = "rain-light";
+        }else if (weather.hourly.precipitation[hourIndex] <= 0.15){
+            chosenFrame = rainFrames[1];
+            precipType = "rain-med";
+        }else{
+            chosenFrame = rainFrames[0];
+            precipType = "rain-heavy";
+        }
     }
-    
-    let precipStr = "";
+
+    const frameLength = chosenFrame.length;
     let rowIndex = Math.floor(precipC/fallTime);
 
     if (rowIndex >= frameLength){
@@ -382,32 +407,38 @@ function updatePrecip(weather){
         precipC = 0;
     }
 
-    chosenFrame = rainFrames[0];
+    if (rowIndex === lastPrecipRow && precipType === lastPrecipType){
+        precipC += 1;
+        return;
+    }
 
-    if (chosenFrame != " "){
-        const shiftedRows = [
-            ...chosenFrame.slice(frameLength - rowIndex),
-            ...chosenFrame.slice(0, frameLength - rowIndex)
-        ];
+    lastPrecipRow = rowIndex;
+    lastPrecipType = precipType;
 
-        const swayOffsets = [-4, -2, 0, 2, 4, 2, 0, -2];
-        const centerPadding = 4;
+    let precipStr = "";
 
-        for (let i = 0; i < shiftedRows.length; i++){
-            if (precipSway){
-                const offset = swayOffsets[i % swayOffsets.length];
+    const shiftedRows = [
+        ...chosenFrame.slice(frameLength - rowIndex),
+        ...chosenFrame.slice(0, frameLength - rowIndex)
+    ];
 
-                const leftSpaces = centerPadding + offset;
-                const rightSpaces = centerPadding - offset;
+    const swayOffsets = [-4, -2, 0, 2, 4, 2, 0, -2];
+    const centerPadding = 4;
 
-                precipStr += " ".repeat(leftSpaces) + renderPrecip(shiftedRows[i]) + " ".repeat(rightSpaces) + "\n";
-            }else{
-                precipStr += renderPrecip(shiftedRows[i]) + "\n";
-            }
+    for (let i = 0; i < shiftedRows.length; i++){
+        if (precipSway){
+            const offset = swayOffsets[i % swayOffsets.length];
+
+            const leftSpaces = centerPadding + offset;
+            const rightSpaces = centerPadding - offset;
+
+            precipStr += " ".repeat(leftSpaces) + shiftedRows[i] + " ".repeat(rightSpaces) + "\n";
+        }else{
+            precipStr += shiftedRows[i] + "\n";
         }
     }
 
-    precipitation.innerHTML = precipStr;
+    precipitation.textContent = precipStr;
 
     precipC += 1;
 }
