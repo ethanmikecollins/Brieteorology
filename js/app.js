@@ -101,7 +101,7 @@ function updateFrame(timestamp){
     updateBackground(now, weather);
     updateApartment(weather);
     updateSunMoon(weather);
-    updatePrecip(weather);
+    updatePrecip(weather, timestamp);
     updateStats(weather);
 
     requestAnimationFrame(updateFrame);
