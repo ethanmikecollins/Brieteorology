@@ -109,7 +109,7 @@ function updateFrame(timestamp){
 
 
 function controls(input){
-    if (input == "toggle"){
+    if (input == "togglePrediction"){
         if (predictionMode == true){
             predictionMode = false;
 
@@ -151,6 +151,32 @@ document.addEventListener("keydown", (event) => {
         controls("reversePrediction");
     }
 });
+
+
+function connectEncoder() {
+    const encoderSocket = new WebSocket("ws://127.0.0.1:8765");
+
+    encoderSocket.addEventListener("open", () => {
+        console.log("Encoder connected");
+    });
+
+    encoderSocket.addEventListener("message", (event) => {
+        console.log("Encoder:", event.data);
+        handleControl(event.data);
+    });
+
+    encoderSocket.addEventListener("close", () => {
+        console.log("Encoder disconnected. Reconnecting...");
+
+        setTimeout(connectEncoder, 1000);
+    });
+
+    encoderSocket.addEventListener("error", () => {
+        encoderSocket.close();
+    });
+}
+
+connectEncoder();
 
 
 function updateTime(now){
