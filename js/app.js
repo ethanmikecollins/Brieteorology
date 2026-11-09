@@ -154,55 +154,21 @@ document.addEventListener("keydown", (event) => {
 
 
 function connectEncoder() {
-    const status = document.getElementById("encoderStatus");
-
-    status.textContent = "Encoder: connecting...";
-
-    console.log("Attempting encoder connection");
-
-    const encoderSocket = new WebSocket(
-        "ws://127.0.0.1:8765"
-    );
+    const encoderSocket = new WebSocket("ws://127.0.0.1:8765");
 
     encoderSocket.addEventListener("open", () => {
-        status.textContent = "Encoder: CONNECTED";
-        console.log("Encoder connected");
     });
 
     encoderSocket.addEventListener("message", (event) => {
-        status.textContent = `Encoder: ${event.data}`;
-
-        console.log(
-            "Encoder:",
-            event.data
-        );
-
         controls(event.data);
     });
 
-    encoderSocket.addEventListener("close", (event) => {
-        status.textContent =
-            `Encoder: disconnected (${event.code})`;
-
-        console.log(
-            "Encoder disconnected:",
-            event.code,
-            event.reason
-        );
-
-        setTimeout(
-            connectEncoder,
-            1000
-        );
+    encoderSocket.addEventListener("close", () => {
+        setTimeout(connectEncoder, 1000);
     });
 
-    encoderSocket.addEventListener("error", (event) => {
-        status.textContent = "Encoder: ERROR";
-
-        console.error(
-            "Encoder WebSocket error",
-            event
-        );
+    encoderSocket.addEventListener("error", () => {
+        encoderSocket.close();
     });
 }
 
