@@ -107,12 +107,12 @@ async def monitor_encoder():
         if difference > 0:
 
             for _ in range(difference):
-                await send_command("forward")
+                await send_command("advancePrediction")
 
         elif difference < 0:
 
             for _ in range(-difference):
-                await send_command("backward")
+                await send_command("reversePrediction")
 
         last_position = current_position
 
