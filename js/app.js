@@ -162,7 +162,7 @@ function connectEncoder() {
 
     encoderSocket.addEventListener("message", (event) => {
         console.log("Encoder:", event.data);
-        handleControl(event.data);
+        controls(event.data);
     });
 
     encoderSocket.addEventListener("close", () => {
