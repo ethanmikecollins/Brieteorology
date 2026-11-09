@@ -107,55 +107,48 @@ function updateFrame(timestamp){
     requestAnimationFrame(updateFrame);
 }
 
-function startPredictionMode(){
-    predictionMode = true;
-    predictionNow = new Date();
 
-    predictionNow.setMinutes(0);
-    predictionNow.setSeconds(0);
-    predictionNow.setMilliseconds(0);
-}
+function controls(input){
+    if (input == "toggle"){
+        if (predictionMode == true){
+            predictionMode = false;
 
-function stopPredictionMode(){
-    predictionMode = false;
-    predictionNow = null;
-    timeFrame = 0;
-    dayIndex = 0;
-}
+            predictionNow = null;
+            timeFrame = 0;
+            dayIndex = 0;
+        }else{
+            predictionMode = true
+            predictionNow = new Date();
 
-function advancePrediction(){
-    predictionNow.setHours(predictionNow.getHours() + 1);
-    if (predictionNow.getHours() == 0){
-        dayIndex = 1;
+            predictionNow.setMinutes(0);
+            predictionNow.setSeconds(0);
+            predictionNow.setMilliseconds(0);
+        }
+
+    }else if (input == "advancePrediction" && timeFrame < 24 && predictionMode == true){
+        predictionNow.setHours(predictionNow.getHours() + 1);
+        if (predictionNow.getHours() == 0){
+            dayIndex = 1;
+        }
+        timeFrame += 1;
+
+    }else if (input == "reversePrediction" && timeFrame > 0 && predictionMode == true){
+        predictionNow.setHours(predictionNow.getHours() - 1);
+        if (predictionNow.getHours() == 23){
+            dayIndex = 0;
+        }
+        timeFrame -= 1;
     }
-}
 
-function reversePrediction(){
-    predictionNow.setHours(predictionNow.getHours() - 1);
-    if (predictionNow.getHours() == 23){
-        dayIndex = 0;
-    }
 }
-
 
 document.addEventListener("keydown", (event) => {
-
     if (event.key === "p"){
-        if (predictionMode){
-            stopPredictionMode();
-        }else{
-            startPredictionMode();
-        }
-    }
-
-    if (predictionMode && event.key === "ArrowRight" && timeFrame < 24) {
-        advancePrediction();
-        timeFrame += 1;
-    }
-
-    if (predictionMode && event.key === "ArrowLeft" && timeFrame > 0) {
-        reversePrediction();
-        timeFrame -= 1;
+        controls("toggle");
+    }else if (event.key === "ArrowRight"){
+        controls("advancePrediction");
+    }else if (event.key === "ArrowLeft"){
+        controls("reversePrediction");
     }
 });
 
