@@ -144,7 +144,7 @@ function controls(input){
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "p"){
-        controls("toggle");
+        controls("togglePrediction");
     }else if (event.key === "ArrowRight"){
         controls("advancePrediction");
     }else if (event.key === "ArrowLeft"){
