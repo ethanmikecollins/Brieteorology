@@ -82,7 +82,7 @@ async def monitor_encoder():
 
     # Product #5880 reports rotation backwards,
     # so negate the encoder position.
-    last_position = -encoder.position
+    last_position = encoder.position
 
     # Button uses INPUT_PULLUP:
     # True  = released
@@ -97,7 +97,7 @@ async def monitor_encoder():
         # Rotation
         # ------------------------------------------
 
-        current_position = -encoder.position
+        current_position = encoder.position
 
         difference = (
             current_position
