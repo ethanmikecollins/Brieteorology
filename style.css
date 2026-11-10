@@ -4,9 +4,15 @@ html, body {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
+}
+
+html,
+body,
+body * {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-drag: none !important;
 }
 
 html,
