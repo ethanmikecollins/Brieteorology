@@ -24,6 +24,15 @@ pre,
     pointer-events: none;
 }
 
+#treeDisplay,
+#treeDisplay *,
+.tree-char {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    pointer-events: none !important;
+}
+
 html,
 body,
 * {
