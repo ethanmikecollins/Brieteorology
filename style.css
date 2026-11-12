@@ -352,7 +352,7 @@ body.night #apartmentDisplay {
 #cloudIconDisplay {
     position: fixed;
     top: 40%;
-    right:20%;
+    right:25%;
 
     transform: translate(-50%, -50%);
 
@@ -371,7 +371,7 @@ body.night #apartmentDisplay {
 #cloudDisplay {
     position: fixed;
     top: 40%;
-    left: 1020px;
+    left: 900px;
 
     transform: translateY(-50%);
 
@@ -390,7 +390,7 @@ body.night #apartmentDisplay {
 #rainIconDisplay {
     position: fixed;
     top: 60%;
-    right: 20%;
+    right: 25%;
 
     transform: translate(-50%, -50%);
 
@@ -409,7 +409,7 @@ body.night #apartmentDisplay {
 #rainDisplay {
     position: fixed;
     top: 60%;
-    left: 1020px;
+    left: 900px;
 
     transform: translateY(-50%);
 
@@ -428,7 +428,7 @@ body.night #apartmentDisplay {
 #snowIconDisplay {
     position: fixed;
     top: 80%;
-    right: 20%;
+    right: 25%;
 
     transform: translate(-50%, -50%);
 
@@ -447,7 +447,7 @@ body.night #apartmentDisplay {
 #snowDisplay {
     position: fixed;
     top: 80%;
-    left: 1020px;
+    left: 900px;
 
     transform: translateY(-50%);
 
