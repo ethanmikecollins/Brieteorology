@@ -354,7 +354,7 @@ function updateSunMoon(weather){
 
 let precipC = 0;
 let lastPrecipUpdate = 0;
-const precipInterval = 1000 / 20; // 20 FPS
+const precipInterval = 1000 / 60; // 20 FPS
 let lastPrecipRow = -1;
 let lastPrecipType = "";
 function updatePrecip(weather, timestamp){
